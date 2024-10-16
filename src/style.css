@@ -1,0 +1,48 @@
+:root{
+    --img-width: 418px;
+    --block-width: calc(50% - var(--img-width)/2);
+    --backgrnd: blueviolet;
+}
+
+body{
+    background-color: var(--backgrnd);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+img{
+    height:500px;
+    width: var(--img-width);
+}
+
+#block{
+    /* background-color: darkcyan; */
+    background-color: var(--backgrnd);
+    height: 100%;
+    width: var(--block-width);
+}
+
+#button-cont{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+}
+
+#frame{
+    position: relative;
+    height: 500px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#strip{
+    position: absolute;
+    z-index: -1;
+    left: var(--block-width);
+    display: flex;
+    height: 100%;
+    width: 2000px;
+}
