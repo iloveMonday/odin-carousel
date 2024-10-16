@@ -24,6 +24,7 @@ export function rightButton(){
     if (position < slides.length-1){
     position++;}
     else (position = 0);
+    moveSlider();
     console.log(position);
 }
 
@@ -33,5 +34,26 @@ export function leftButton(){
         position = slides.length-1;}
         else {
             position--;};
+    moveSlider()
     console.log(position);
+}
+
+
+// HERE IS WHERE I NEED TO WORK////////////////////////////////////
+export function moveSlider(){
+    const root = getComputedStyle(document.documentElement);
+    const stripDiv = getComputedStyle(strip);
+    const blocky = stripDiv.getPropertyValue('left');
+    const blockInt = parseInt(blocky.replace('px', ''));
+
+    const imgValue = root.getPropertyValue('--img-width');
+    const imgInt = parseInt(imgValue.replace('px', ''));
+    let imgPosition = (imgInt*position)+blockInt + "px";
+
+    console.log("left is " + blocky)
+    console.log(imgPosition);
+    
+ 
+    
+    strip.style.setProperty("left", imgPosition)
 }

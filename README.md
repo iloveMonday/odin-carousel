@@ -22,3 +22,8 @@ Play around with your slideshow!
 import 5 images
 make a viewport the size of the images? -layers?
 static slider of images (flex?) move position left or right
+
+
+
+FOR NEXT TIME
+-something funky happening in the slider position calc

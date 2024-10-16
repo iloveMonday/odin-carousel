@@ -1,5 +1,5 @@
 import './style.css';
-import { createSlides, leftButton, rightButton } from './slider';
+import { createSlides, leftButton, rightButton, moveSlider } from './slider';
 
 console.log("oh hello[in the voice]")
 
