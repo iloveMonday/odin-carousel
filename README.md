@@ -26,4 +26,6 @@ static slider of images (flex?) move position left or right
 
 
 FOR NEXT TIME
--something funky happening in the slider position calc
+circles light up with Left Right button,
+make circles clickable (return index, set as var position)
+figure out a timer
