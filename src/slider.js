@@ -7,6 +7,7 @@ const slides = [
 ];
 
 const strip = document.getElementById("strip");
+const block = document.getElementById("block");
 
 export function createSlides() {
     console.log("creating slides...")
@@ -20,7 +21,6 @@ export function createSlides() {
 let position = 0;
 
 export function rightButton(){
-    console.log("righto");
     if (position < slides.length-1){
     position++;}
     else (position = 0);
@@ -29,31 +29,30 @@ export function rightButton(){
 }
 
 export function leftButton(){
-    console.log("leftly");
     if (position == 0){
         position = slides.length-1;}
         else {
             position--;};
-    moveSlider()
+    moveSlider();
     console.log(position);
 }
 
 
-// HERE IS WHERE I NEED TO WORK////////////////////////////////////
+
 export function moveSlider(){
     const root = getComputedStyle(document.documentElement);
-    const stripDiv = getComputedStyle(strip);
-    const blocky = stripDiv.getPropertyValue('left');
-    const blockInt = parseInt(blocky.replace('px', ''));
+
+    const blockDiv = getComputedStyle(block);
+    const blockValue = blockDiv.getPropertyValue('width');
+    const blockWidth = parseInt(blockValue.replace('px', ''));
 
     const imgValue = root.getPropertyValue('--img-width');
-    const imgInt = parseInt(imgValue.replace('px', ''));
-    let imgPosition = (imgInt*position)+blockInt + "px";
+    const imgWidth = parseInt(imgValue.replace('px', ''));
+    let imgPosition = ((-imgWidth*position)+blockWidth) + "px";
 
-    console.log("left is " + blocky)
-    console.log(imgPosition);
-    
- 
-    
-    strip.style.setProperty("left", imgPosition)
+    strip.style.setProperty("left", imgPosition);
+
+    // // console.log("left value is " + blockValue);
+    // // console.log("img is " + imgWidth);
+    // console.log(imgPosition);; 
 }
