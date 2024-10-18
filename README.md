@@ -26,6 +26,8 @@ static slider of images (flex?) move position left or right
 
 
 FOR NEXT TIME
+POSITIONING MESSED UP when resized!!!!! whyyyyyyyy
+
 circles light up with Left Right button,
 make circles clickable (return index, set as var position)
 figure out a timer
