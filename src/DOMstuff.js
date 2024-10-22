@@ -13,17 +13,12 @@ export function moveSlider(pos){
     let imgPosition = ((-imgWidth*pos)+blockWidth) + "px";
 
     strip.style.setProperty("left", imgPosition);
+    // strip.style.setProperty("left", "(-var(--image-width)*" + pos + ") + var(--block-width)");
     createCircles(getPosition());
-
-    // // console.log("left value is " + blockValue);
-    // // console.log("img is " + imgWidth);
-    // console.log(imgPosition);; 
 }
 
-// export funtion clickCircle(){
-//     createCircles();
-    
-// }
+
+
 
 
 // export function clickCircle(index, pos){

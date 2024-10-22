@@ -61,11 +61,29 @@ export function leftButton(){
     console.log(position);
 }
 
+
 export function getPosition(){
     return position;
 }
 
+export function clickCircle(index){
+  position = index;
+  createCircles(position);
+  // moveSlider(position);
+  // console.log("circley index is " + index); 
+  console.log("but really it's " + getPosition());
+}
 
-// export function returnCirclePos(e){
-//   e.
-// }
+
+export function help(){
+  console.log("help")
+}
+
+const circle = document.querySelectorAll(".circle");
+circle.forEach((e)=>
+    e.addEventListener("click", () =>{
+        let index = e.dataset.index;
+        // clickCircle(index);
+        help();
+        console.log("hello " + index)
+    }))

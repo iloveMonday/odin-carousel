@@ -30,4 +30,6 @@ POSITIONING MESSED UP when resized!!!!! whyyyyyyyy
 
 circles light up with Left Right button,
 make circles clickable (return index, set as var position)
+why does circle click only work once
+
 figure out a timer
